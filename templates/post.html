@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - THE TEARDOWN{% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{ title }}</h2>
+    <div class="post-meta">{{ date.strftime('%B %d, %Y') }}</div>
+    <div class="post-tags">
+        {% for tag in tags %}
+        <a href="/tags/{{ tag }}" class="tag">#{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {{ content | safe }}
+</article>
+{% endblock %}

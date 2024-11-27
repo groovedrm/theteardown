@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --text-color: #333;
+            --background: #fff;
+            --secondary-bg: #f8f9fa;
+            --link-color: #3498db;
+            --max-width: 800px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+        }
+
+        nav {
+            background: var(--secondary-bg);
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        article {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .post-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .archive {
+            list-style: none;
+        }
+
+        .archive li {
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: var(--secondary-bg);
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .rss-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #f26522;
+            color: white;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feed.xml">RSS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Sample Blog Post</h2>
+            <div class="post-meta">Posted on October 1, 2024</div>
+            <p>Your blog content goes here...</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2024 My Blog. All rights reserved.</p>
+        <a href="feed.xml" class="rss-link">Subscribe via RSS</a>
+    </footer>
+</body>
+</html>

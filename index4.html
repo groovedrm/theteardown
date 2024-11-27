@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE TEARDOWN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter/3.19.3/inter.css">
+    <style>
+        :root {
+            --text-color: #1a1a1a;
+            --link-color: #0000CC;
+            --quote-border: #ff6b35;
+            --max-width: 650px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            padding: 2rem 1rem;
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: 0 auto 4rem auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        article {
+            margin-bottom: 4rem;
+        }
+
+        .post-meta {
+            color: #666;
+            font-size: 0.875rem;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2rem auto 4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            max-width: var(--max-width);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        blockquote {
+            margin: 2rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--quote-border);
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1e1e1;
+            margin: 2rem 0;
+        }
+
+        pre {
+            background: #f6f8fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'SF Mono', Menlo, monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 1.5rem 0;
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'SF Mono', Menlo, monospace;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            padding: 0;
+            background: none;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .footnotes {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e1e1e1;
+            font-size: 0.9rem;
+        }
+
+        .footnote {
+            font-size: 0.8em;
+            vertical-align: super;
+            color: var(--link-color);
+        }
+
+        .footnote-backref {
+            margin-left: 0.5rem;
+            font-size: 0.8em;
+        }
+
+        .archive {
+            list-style: none;
+        }
+
+        .archive li {
+            margin: 1rem 0;
+        }
+
+        .footer-nav {
+            max-width: var(--max-width);
+            margin: 4rem auto 2rem auto;
+            padding-top: 2rem;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            body {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>The Teardown</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feed.xml">RSS</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Sample Post Title</h2>
+            <div class="post-meta">October 1, 2024</div>
+            
+            <p>Regular paragraph with <code>inline code</code>.</p>
+            
+            <pre><code>function example() {
+    return "This is a code block";
+}</code></pre>
+            
+            <hr>
+            
+            <ul>
+                <li>First bullet point with some longer text to demonstrate how line wrapping works in list items</li>
+                <li>Second bullet point</li>
+                <li>Third bullet point with a <a href="#">link</a></li>
+            </ul>
+
+            <blockquote>
+                This is how quoted text will appear, with an orange bar on the left side. The quote can be multiple lines long and will maintain proper spacing.
+            </blockquote>
+            
+            <p>Here's a sentence with a footnote<a href="#fn1" class="footnote">1</a>.</p>
+            
+            <div class="footnotes">
+                <p id="fn1">1. This is a footnote with additional details or references. <a href="#" class="footnote-backref">↩</a></p>
+            </div>
+        </article>
+    </main>
+
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feed.xml">RSS</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
